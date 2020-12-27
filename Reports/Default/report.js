@@ -38,7 +38,7 @@ formatter.step({
 });
 formatter.step({
   "line": 8,
-  "name": "User entered \u003cUserTitle\u003e, \u003cFirstName\u003e, \u003cLastName\u003e, \u003cUserEmail\u003e, \u003cUserPassword\u003e on Cœreate Teacher Account screen",
+  "name": "User entered \u003cUserTitle\u003e, \u003cFirstName\u003e, \u003cLastName\u003e, \u003cUserEmail\u003e, \u003cUserPassword\u003e on Create Teacher Account screen",
   "keyword": "And "
 });
 formatter.step({
@@ -95,7 +95,7 @@ formatter.examples({
         "Mr.",
         "Jacob",
         "Smith",
-        "13JSmith@mail.ml",
+        "14JSmith@mail.ml",
         "JSmith123",
         "10012",
         "Scholastic+Book+Clubs"
@@ -107,7 +107,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 5180863530,
+  "duration": 5629665016,
   "status": "passed"
 });
 formatter.scenario({
@@ -140,7 +140,7 @@ formatter.step({
 });
 formatter.step({
   "line": 8,
-  "name": "User entered Mr., Jacob, Smith, 13JSmith@mail.ml, JSmith123 on Cœreate Teacher Account screen",
+  "name": "User entered Mr., Jacob, Smith, 14JSmith@mail.ml, JSmith123 on Create Teacher Account screen",
   "matchedColumns": [
     0,
     1,
@@ -188,19 +188,44 @@ formatter.match({
   "location": "CreateAccountSD.createAccount()"
 });
 formatter.result({
-  "duration": 565292737,
+  "duration": 289091079,
   "status": "passed"
 });
 formatter.match({
   "location": "CreateAccountSD.chooseTeacherOption()"
 });
 formatter.result({
-  "duration": 1317423554,
+  "duration": 1642629270,
   "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Mr.",
+      "offset": 13
+    },
+    {
+      "val": "Jacob",
+      "offset": 18
+    },
+    {
+      "val": "Smith",
+      "offset": 25
+    },
+    {
+      "val": "14JSmith@mail.ml",
+      "offset": 32
+    },
+    {
+      "val": "JSmith123",
+      "offset": 50
+    }
+  ],
+  "location": "CreateAccountSD.userEntersTitleNameEmailPasswordOnCreateTeacherAccountScreen(String,String,String,String,String)"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 2401230385,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -216,7 +241,8 @@ formatter.match({
   "location": "CreateAccountSD.userSearchesForSchoolOnMySchoolScreenByZIP(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 7026413106,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -236,31 +262,40 @@ formatter.match({
   "location": "CreateAccountSD.userSelectRoleGradeEnterNumStudentOnMyRoleScreen(String,String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 2081307381,
+  "status": "passed"
 });
 formatter.match({
   "location": "CreateAccountSD.userChoosePreferredReadingLevelSystemOnCustomizeYourExperienceScreen()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 10952093123,
+  "status": "passed"
 });
 formatter.match({
   "location": "CreateAccountSD.isClassCodeSame()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 3582647449,
+  "status": "passed"
 });
 formatter.match({
   "location": "CreateAccountSD.isNameSame()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 27685181,
+  "status": "passed"
 });
 formatter.match({
   "location": "CreateAccountSD.isAddressSame()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 60119505,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 199995441,
+  "status": "passed"
 });
 formatter.scenarioOutline({
   "comments": [
@@ -359,7 +394,7 @@ formatter.examples({
         "Ms.",
         "Olive",
         "Miller",
-        "2OMiller@mail.ml",
+        "21Miller@mail.ml",
         "OMiller123",
         "99518",
         "Adak School"
@@ -371,7 +406,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 4277485684,
+  "duration": 3994008055,
   "status": "passed"
 });
 formatter.scenario({
@@ -404,7 +439,7 @@ formatter.step({
 });
 formatter.step({
   "line": 29,
-  "name": "User entered Ms., Olive, Miller, 2OMiller@mail.ml, OMiller123 on Create Teacher Account screen",
+  "name": "User entered Ms., Olive, Miller, 21Miller@mail.ml, OMiller123 on Create Teacher Account screen",
   "matchedColumns": [
     0,
     1,
@@ -452,14 +487,14 @@ formatter.match({
   "location": "CreateAccountSD.createAccount()"
 });
 formatter.result({
-  "duration": 146450957,
+  "duration": 168657139,
   "status": "passed"
 });
 formatter.match({
   "location": "CreateAccountSD.chooseTeacherOption()"
 });
 formatter.result({
-  "duration": 1558098436,
+  "duration": 1616030767,
   "status": "passed"
 });
 formatter.match({
@@ -477,7 +512,7 @@ formatter.match({
       "offset": 25
     },
     {
-      "val": "2OMiller@mail.ml",
+      "val": "21Miller@mail.ml",
       "offset": 33
     },
     {
@@ -488,7 +523,7 @@ formatter.match({
   "location": "CreateAccountSD.userEntersTitleNameEmailPasswordOnCreateTeacherAccountScreen(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 2359507049,
+  "duration": 2287408803,
   "status": "passed"
 });
 formatter.match({
@@ -505,8 +540,9 @@ formatter.match({
   "location": "CreateAccountSD.userSearchesForSchoolOnMySchoolScreenByZIP(String,String)"
 });
 formatter.result({
-  "duration": 5226254454,
-  "status": "passed"
+  "duration": 12600560019,
+  "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //li[@class\u003d\u0027ui-menu-item\u0027] (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u00270x0001F60E.local\u0027, ip: \u0027fe80:0:0:0:1c44:204e:1b8f:d5a8%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.7\u0027, java.version: \u002714.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: /var/folders/y9/6hvhdv613g7...}, goog:chromeOptions: {debuggerAddress: localhost:54942}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: f91de8b2887c8ecaf793357adf217df2\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat Pages.BasePage.waitForElement(BasePage.java:124)\n\tat Pages.BasePage.clickThis(BasePage.java:65)\n\tat Pages.Scholastic.HomePage.selectSchool(HomePage.java:112)\n\tat StepDefinition.Scholastic.CreateAccountSD.userSearchesForSchoolOnMySchoolScreenByZIP(CreateAccountSD.java:45)\n\tat ✽.And User searched for school by \u002799518\u0027, \u0027Adak School\u0027 on My School screen(scholastic/CreateAccount.feature:30)\n",
+  "status": "failed"
 });
 formatter.match({
   "arguments": [
@@ -526,35 +562,34 @@ formatter.match({
   "location": "CreateAccountSD.userSelectRoleGradeEnterNumStudentOnMyRoleScreen(String,String,String)"
 });
 formatter.result({
-  "duration": 2197049331,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "CreateAccountSD.userChoosePreferredReadingLevelSystemOnCustomizeYourExperienceScreen()"
 });
 formatter.result({
-  "duration": 11506127504,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "CreateAccountSD.isClassCodeSame()"
 });
 formatter.result({
-  "duration": 2759677186,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "CreateAccountSD.isNameSame()"
 });
 formatter.result({
-  "duration": 26800705,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "CreateAccountSD.isAddressSame()"
 });
 formatter.result({
-  "duration": 93576846,
+  "status": "skipped"
+});
+formatter.after({
+  "duration": 194455548,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -655,7 +690,7 @@ formatter.examples({
         "Mrs.",
         "Silvia",
         "Brown",
-        "1SBrown@mail.ml",
+        "2SBrown@mail.ml",
         "SBrown123",
         "New York",
         "New York",
@@ -668,7 +703,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 4699755763,
+  "duration": 4422533150,
   "status": "passed"
 });
 formatter.scenario({
@@ -701,7 +736,7 @@ formatter.step({
 });
 formatter.step({
   "line": 50,
-  "name": "User entered Mrs., Silvia, Brown, 1SBrown@mail.ml, SBrown123 on Create Teacher Account screen",
+  "name": "User entered Mrs., Silvia, Brown, 2SBrown@mail.ml, SBrown123 on Create Teacher Account screen",
   "matchedColumns": [
     0,
     1,
@@ -750,14 +785,14 @@ formatter.match({
   "location": "CreateAccountSD.createAccount()"
 });
 formatter.result({
-  "duration": 140852650,
+  "duration": 132285711,
   "status": "passed"
 });
 formatter.match({
   "location": "CreateAccountSD.chooseTeacherOption()"
 });
 formatter.result({
-  "duration": 1581020637,
+  "duration": 1264206966,
   "status": "passed"
 });
 formatter.match({
@@ -775,7 +810,7 @@ formatter.match({
       "offset": 27
     },
     {
-      "val": "1SBrown@mail.ml",
+      "val": "2SBrown@mail.ml",
       "offset": 34
     },
     {
@@ -786,7 +821,7 @@ formatter.match({
   "location": "CreateAccountSD.userEntersTitleNameEmailPasswordOnCreateTeacherAccountScreen(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 2288289694,
+  "duration": 2600473820,
   "status": "passed"
 });
 formatter.match({
@@ -807,8 +842,8 @@ formatter.match({
   "location": "CreateAccountSD.userSearchesForSchoolOnMySchoolScreenByState(String,String,String)"
 });
 formatter.result({
-  "duration": 14240406228,
-  "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: button-search (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u00270x0001F60E.local\u0027, ip: \u0027fe80:0:0:0:1c44:204e:1b8f:d5a8%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.7\u0027, java.version: \u002714.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: /var/folders/y9/6hvhdv613g7...}, goog:chromeOptions: {debuggerAddress: localhost:54213}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 921abc168e66e74138b30bcfc9c23a97\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat Pages.BasePage.waitForElement(BasePage.java:124)\n\tat Pages.BasePage.clickThis(BasePage.java:65)\n\tat Pages.Scholastic.HomePage.clickSearchSchool(HomePage.java:105)\n\tat StepDefinition.Scholastic.CreateAccountSD.userSearchesForSchoolOnMySchoolScreenByState(CreateAccountSD.java:53)\n\tat ✽.And User searched for school by \u0027New York\u0027, \u0027New York\u0027 and Scholastic+Book+Clubs on My School screen(scholastic/CreateAccount.feature:51)\n",
+  "duration": 13571354600,
+  "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: button-search (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u00270x0001F60E.local\u0027, ip: \u0027fe80:0:0:0:1c44:204e:1b8f:d5a8%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.7\u0027, java.version: \u002714.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: /var/folders/y9/6hvhdv613g7...}, goog:chromeOptions: {debuggerAddress: localhost:54993}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 2512cba00c7f8f0cbf641fa21f8f5d14\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat Pages.BasePage.waitForElement(BasePage.java:124)\n\tat Pages.BasePage.clickThis(BasePage.java:65)\n\tat Pages.Scholastic.HomePage.clickSearchSchool(HomePage.java:105)\n\tat StepDefinition.Scholastic.CreateAccountSD.userSearchesForSchoolOnMySchoolScreenByState(CreateAccountSD.java:53)\n\tat ✽.And User searched for school by \u0027New York\u0027, \u0027New York\u0027 and Scholastic+Book+Clubs on My School screen(scholastic/CreateAccount.feature:51)\n",
   "status": "failed"
 });
 formatter.match({
@@ -854,6 +889,10 @@ formatter.match({
 });
 formatter.result({
   "status": "skipped"
+});
+formatter.after({
+  "duration": 169414472,
+  "status": "passed"
 });
 formatter.uri("scholastic/EnterOrder.feature");
 formatter.feature({
@@ -933,7 +972,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 5451339627,
+  "duration": 3978303945,
   "status": "passed"
 });
 formatter.scenario({
@@ -996,15 +1035,15 @@ formatter.match({
   "location": "RecommendationsSD.userLoggedInWithValidLoginAndPassword(String,String)"
 });
 formatter.result({
-  "duration": 11291640292,
-  "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: loginModalBtn (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u00270x0001F60E.local\u0027, ip: \u0027fe80:0:0:0:1c44:204e:1b8f:d5a8%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.7\u0027, java.version: \u002714.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: /var/folders/y9/6hvhdv613g7...}, goog:chromeOptions: {debuggerAddress: localhost:54261}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: aa5a9e425cd8113ad91b5e94fc6bedfe\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat Pages.BasePage.waitForElement(BasePage.java:124)\n\tat Pages.BasePage.clickThis(BasePage.java:65)\n\tat Pages.Scholastic.HomePage.loggIn(HomePage.java:191)\n\tat StepDefinition.Scholastic.RecommendationsSD.userLoggedInWithValidLoginAndPassword(RecommendationsSD.java:21)\n\tat ✽.When User logged in with valid OMiller@mail.ml and OMiller123(scholastic/EnterOrder.feature:6)\n",
-  "status": "failed"
+  "duration": 8145936734,
+  "status": "passed"
 });
 formatter.match({
   "location": "EnterOrderSD.userNavigatedToStudentFlyerOrders()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 2912392016,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -1020,13 +1059,19 @@ formatter.match({
   "location": "EnterOrderSD.userEnterStudentNameAndItemNumber(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 347372881,
+  "status": "passed"
 });
 formatter.match({
   "location": "EnterOrderSD.userVerifiedThatTeacherGetsErrorForInvalidItemNumberInSFOStudentFlyerOrder()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 142293105,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 177607269,
+  "status": "passed"
 });
 formatter.scenarioOutline({
   "comments": [
@@ -1037,65 +1082,9 @@ formatter.scenarioOutline({
     {
       "line": 15,
       "value": "#      | OMiller@mail.ml | OMiller123 |"
-    },
-    {
-      "line": 17,
-      "value": "#  URL: https://clubs3qa1.scholastic.com/"
-    },
-    {
-      "line": 18,
-      "value": "#  Login"
-    },
-    {
-      "line": 19,
-      "value": "#  Go to ENTER ORDERSS"
-    },
-    {
-      "line": 20,
-      "value": "#  elect YOUR TEACHER ORDER"
-    },
-    {
-      "line": 21,
-      "value": "#  Go to BY FLYER tab"
-    },
-    {
-      "line": 22,
-      "value": "#  Click on Price-QTY box"
-    },
-    {
-      "line": 23,
-      "value": "#"
-    },
-    {
-      "line": 24,
-      "value": "#  VERIFICATION"
-    },
-    {
-      "line": 25,
-      "value": "#  Teacher sees a jumper right above the box with message:"
-    },
-    {
-      "line": 26,
-      "value": "#  Heading - IMPORTANTMessage - All student paper flyer orders MUST be entered in the Student Flyer Orders tab."
-    },
-    {
-      "line": 27,
-      "value": "#  Enter data in the clicked Price-QTY boxClick on X on the jumper.Click on another Price-QTY box"
-    },
-    {
-      "line": 28,
-      "value": "#"
-    },
-    {
-      "line": 29,
-      "value": "#  VERIFICATION"
-    },
-    {
-      "line": 30,
-      "value": "#  Teacher does NOT see any jumper."
     }
   ],
-  "line": 33,
+  "line": 18,
   "name": "Verify YOUR TEACHER ORDER-By Flyer jumper",
   "description": "",
   "id": "add-student-flyer-order;verify-your-teacher-order-by-flyer-jumper",
@@ -1103,33 +1092,33 @@ formatter.scenarioOutline({
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 32,
+      "line": 17,
       "name": "@Smoke"
     }
   ]
 });
 formatter.step({
-  "line": 34,
+  "line": 19,
   "name": "User logged in with valid \u003cLogin\u003e and \u003cPassword\u003e",
   "keyword": "When "
 });
 formatter.step({
-  "line": 35,
+  "line": 20,
   "name": "User navigated to Your Teacher Orders",
   "keyword": "And "
 });
 formatter.step({
-  "line": 36,
+  "line": 21,
   "name": "User clicked on Price-QTY box",
   "keyword": "And "
 });
 formatter.step({
-  "line": 37,
+  "line": 22,
   "name": "User verified that a jumper right above the box with message: All student paper flyer orders MUST be entered in the Student Flyer Orders tab. are visible",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 39,
+  "line": 24,
   "name": "",
   "description": "",
   "id": "add-student-flyer-order;verify-your-teacher-order-by-flyer-jumper;",
@@ -1139,7 +1128,7 @@ formatter.examples({
         "Login",
         "Password"
       ],
-      "line": 40,
+      "line": 25,
       "id": "add-student-flyer-order;verify-your-teacher-order-by-flyer-jumper;;1"
     },
     {
@@ -1147,18 +1136,18 @@ formatter.examples({
         "OMiller@mail.ml",
         "OMiller123"
       ],
-      "line": 41,
+      "line": 26,
       "id": "add-student-flyer-order;verify-your-teacher-order-by-flyer-jumper;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 5298555219,
+  "duration": 4259436438,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 41,
+  "line": 26,
   "name": "Verify YOUR TEACHER ORDER-By Flyer jumper",
   "description": "",
   "id": "add-student-flyer-order;verify-your-teacher-order-by-flyer-jumper;;2",
@@ -1166,7 +1155,7 @@ formatter.scenario({
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 32,
+      "line": 17,
       "name": "@Smoke"
     },
     {
@@ -1176,7 +1165,7 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 34,
+  "line": 19,
   "name": "User logged in with valid OMiller@mail.ml and OMiller123",
   "matchedColumns": [
     0,
@@ -1185,17 +1174,17 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "line": 35,
+  "line": 20,
   "name": "User navigated to Your Teacher Orders",
   "keyword": "And "
 });
 formatter.step({
-  "line": 36,
+  "line": 21,
   "name": "User clicked on Price-QTY box",
   "keyword": "And "
 });
 formatter.step({
-  "line": 37,
+  "line": 22,
   "name": "User verified that a jumper right above the box with message: All student paper flyer orders MUST be entered in the Student Flyer Orders tab. are visible",
   "keyword": "Then "
 });
@@ -1213,21 +1202,21 @@ formatter.match({
   "location": "RecommendationsSD.userLoggedInWithValidLoginAndPassword(String,String)"
 });
 formatter.result({
-  "duration": 8180518098,
+  "duration": 8178927832,
   "status": "passed"
 });
 formatter.match({
   "location": "EnterOrderSD.userNavigatedToYourTeacherOrders()"
 });
 formatter.result({
-  "duration": 2593363867,
+  "duration": 2510842620,
   "status": "passed"
 });
 formatter.match({
   "location": "EnterOrderSD.userClickedOnPriceQTYBox()"
 });
 formatter.result({
-  "duration": 174169143,
+  "duration": 169565070,
   "status": "passed"
 });
 formatter.match({
@@ -1240,7 +1229,11 @@ formatter.match({
   "location": "EnterOrderSD.verifyThatAJumperRightAboveTheBox(String)"
 });
 formatter.result({
-  "duration": 2469708120,
+  "duration": 2445882725,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 169974227,
   "status": "passed"
 });
 formatter.uri("scholastic/MyAccount.feature");
@@ -1317,7 +1310,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 7331486933,
+  "duration": 3985764878,
   "status": "passed"
 });
 formatter.scenario({
@@ -1376,28 +1369,32 @@ formatter.match({
   "location": "RecommendationsSD.userLoggedInWithValidLoginAndPassword(String,String)"
 });
 formatter.result({
-  "duration": 8274416628,
+  "duration": 8153288425,
   "status": "passed"
 });
 formatter.match({
   "location": "MyAccountSD.userNavigatedToMyAccountPage()"
 });
 formatter.result({
-  "duration": 2852836076,
+  "duration": 2417987194,
   "status": "passed"
 });
 formatter.match({
   "location": "MyAccountSD.userAddedCreditCardToPaymentMethod()"
 });
 formatter.result({
-  "duration": 104540060,
+  "duration": 22773351,
   "status": "passed"
 });
 formatter.match({
   "location": "MyAccountSD.verifyWhenUserTryToAddThCreditCardGetErrorMsg()"
 });
 formatter.result({
-  "duration": 171822505,
+  "duration": 172136983,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 179478347,
   "status": "passed"
 });
 formatter.uri("scholastic/Recommendations.feature");
@@ -1476,7 +1473,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 5025623998,
+  "duration": 4033429441,
   "status": "passed"
 });
 formatter.scenario({
@@ -1538,7 +1535,7 @@ formatter.match({
   "location": "RecommendationsSD.userLoggedInWithValidLoginAndPassword(String,String)"
 });
 formatter.result({
-  "duration": 8431587940,
+  "duration": 8138148391,
   "status": "passed"
 });
 formatter.match({
@@ -1551,21 +1548,25 @@ formatter.match({
   "location": "RecommendationsSD.userSearchedForBookName(String)"
 });
 formatter.result({
-  "duration": 2884099723,
+  "duration": 1796026687,
   "status": "passed"
 });
 formatter.match({
   "location": "RecommendationsSD.userAddedBookToRecommendationsToStudentsFromQuickLook()"
 });
 formatter.result({
-  "duration": 6383846811,
+  "duration": 4908866585,
   "status": "passed"
 });
 formatter.match({
   "location": "RecommendationsSD.verifyThatTheItemIsAddedInRecommendationsToStudentsListsUnderMyLists()"
 });
 formatter.result({
-  "duration": 51560189,
+  "duration": 36631026,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 187937562,
   "status": "passed"
 });
 });
