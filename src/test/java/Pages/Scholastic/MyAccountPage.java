@@ -18,19 +18,22 @@ public class MyAccountPage extends BasePage {
     By addCard = By.xpath("//a[@class='custom-tooltip tooltipstered']");
     By cardNumFld = By.xpath("//input[contains(@id,'newcreditcard_number')]");
     By expMonth = By.xpath("//select[contains(@id,'newcreditcard_month')]");
-    By expDate = By.xpath("//select[contains(@id,'newcreditcard_year')]");
-    By securityCode = By.xpath("//input[contains(@id,'newcreditcard_cvn')]");
-    By fName = By.xpath("//input[contains(@id,'address_firstname')]");
-    By lName = By.xpath("//input[contains(@id,'address_lastname')]");
-    By userAddress = By.xpath("//input[contains(@id,'address_address1')]");
-    By billingZIP = By.xpath("//input[contains(@id,'address_postal')]");
-    By phoneNum = By.xpath("//input[contains(@id,'address_phone')]");
+    By month = By.xpath("//li[@data-label='04']");
+    By expYear = By.xpath("//select[contains(@id,'newcreditcard_year')]");
+    By year = By.xpath("//li[@data-label='2023']");
+    By cvnCode = By.xpath("//input[contains(@id,'newcreditcard_cvn')]");
+    By firstNameFld = By.xpath("//input[contains(@id,'address_firstname')]");
+    By lastNameFld = By.xpath("//input[contains(@id,'address_lastname')]");
+    By addressFld = By.xpath("//input[contains(@id,'address_address1')]");
+    By zipFld = By.xpath("//input[contains(@id,'address_postal')]");
+    By phoneFld = By.xpath("//input[contains(@id,'address_phone')]");
     By saveBtn = By.id("applyBtn");
     By creditCardList = By.xpath("//div[@class='cards-section']//div[contains(@class, 'cardname')]");
     By errorMsg = By.xpath("//div[contains(text(), 'You can only store three credit cards') and @class='tooltipster-body']");
     By enterOrdersElm = By.xpath("(//a[@id='enter-orders'])[2]");
     By studentFlyerOrdersElm = By.xpath("(//li[@id='student-flyer-orders'])[2]");
     By yourTeacherOrdersElm = By.xpath("(//li[@id='your-teacher-order'])[2]");
+    By byItem = By.xpath("(//a[contains(text(), 'By Item#')])[1]");
 
 
 
@@ -59,7 +62,18 @@ public class MyAccountPage extends BasePage {
         if(creditCardsList.size()==3) {
             return;
         } else {
-            //add code to add credit card
+            type(cardNumFld,"4111111111111111");
+            clickThis(expMonth);
+            clickThis(month);
+            clickThis(expYear);
+            clickThis(year);
+            type(cvnCode, "111");
+            type(firstNameFld, "Test");
+            type(lastNameFld, "Test");
+            type(addressFld, "123 Test");
+            type(zipFld, "10036");
+            type(phoneFld, "9299999999");
+            clickThis(saveBtn);
         }
     }
 
@@ -71,5 +85,9 @@ public class MyAccountPage extends BasePage {
     public void goesToYourTeacherOrders() {
         setCursor(enterOrdersElm);
         clickThis(yourTeacherOrdersElm);
+    }
+
+    public void goesByItem() {
+        clickThis(byItem);
     }
 }

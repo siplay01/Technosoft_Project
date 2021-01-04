@@ -10,7 +10,6 @@ public class WishlistPage extends BasePage {
 
     public boolean isElemPresent(String selectedBook) {
         String temp = "//img[@title='" + selectedBook + "']";
-        System.out.println(temp);
         WebElement cityElemt = Web.getDriver().findElement(By.xpath(temp));
         return cityElemt.isDisplayed();
     }

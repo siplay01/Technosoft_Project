@@ -24,7 +24,6 @@ public class SearchPage extends BasePage {
         clickThis(recommendedBtn);
         Web.getDriver().findElement(recommendToStudsChekBox).sendKeys(Keys.SPACE);
         clickThis(closeQW);
-        sleepFor(2);
         clickThis(myLists);
         clickThis(recommendToStudsList);
         return bookName;

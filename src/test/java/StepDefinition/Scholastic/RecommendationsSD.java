@@ -21,20 +21,19 @@ public class RecommendationsSD {
         homePage.loggIn(userLogin, userPassword);
     }
 
-    @And("^User searched for '(.+)'$")
+    @When("^User searched for '(.+)'$")
     public void userSearchedForBookName(String item) {
         homePage.searchFor(item);
     }
 
-    @And("^User added Book to ‘Recommendations to Students’ from 'Quick Look'$")
+    @When("^User added Book to ‘Recommendations to Students’ from 'Quick Look'$")
     public void userAddedBookToRecommendationsToStudentsFromQuickLook() {
         selectedBook = searchPage.addToRecommendations();
-        System.out.println(selectedBook);
     }
 
     @Then("^User verified that the item is added in Recommendations to Students Lists under My Lists$")
     public void verifyThatTheItemIsAddedInRecommendationsToStudentsListsUnderMyLists() {
-    Assert.assertTrue(wishlistPage.isElemPresent(selectedBook));
+    Assert.assertTrue(wishlistPage.isElemPresent(selectedBook), "Item NOT added in Recommendations");
     }
 
 

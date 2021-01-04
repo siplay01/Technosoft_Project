@@ -63,17 +63,11 @@ public class HomePage extends BasePage {
     By searchFld = By.xpath("//input[@data-placeholder='Search by Title, Author, Item # or Keyword']");
 
 
-
-
-
     public void clickCreateAccount() {  clickThis(createAccountBtn); }
 
     public void chooseTeacherOption() { clickThis(accountTeacherChoice); }
 
-    public void clickNextOnCreateAcc() {
-        sleepFor(1);
-        clickThis(nextBtnOnFirstPg);
-    }
+    public void clickNextOnCreateAcc() { clickThis(nextBtnOnFirstPg); }
 
     public void selectTitle(String title) {
         clickThis(dropDown);
@@ -85,9 +79,7 @@ public class HomePage extends BasePage {
         }
     }
 
-    public void enterFirstName(String firstName) {
-        sleepFor(1);
-        type(firstNameFld, firstName); }
+    public void enterFirstName(String firstName) { type(firstNameFld, firstName); }
 
     public void enterLastName(String lastName) { type(lastNameFld,lastName); }
 
@@ -95,8 +87,7 @@ public class HomePage extends BasePage {
 
     public void enterPass(String userPassword) { type(passwordFld, userPassword);}
 
-    public void clickCheckbox() {
-        Web.getDriver().findElement(checkBox).sendKeys(Keys.SPACE); }
+    public void clickCheckbox() { Web.getDriver().findElement(checkBox).sendKeys(Keys.SPACE); }
 
     public void clickNext() { clickThis(nextBtn); }
 
@@ -108,7 +99,6 @@ public class HomePage extends BasePage {
 
     public void selectSchool(String schoolName) {
         clickThis(searchSchoolFld);
-        sleepFor(1);
         clickThis(selectSchoolName);
     }
 
@@ -118,7 +108,6 @@ public class HomePage extends BasePage {
     }
 
     public void selectGrade(String userGrade) {
-        sleepFor(1);
         clickThis(gradeDrpDwn);
         clickThis(grade1stGrade);
     }
@@ -128,16 +117,13 @@ public class HomePage extends BasePage {
     }
 
     public void selectPreferredSystem() {
-        sleepFor(1);
         clickThis(dropDown);
-        sleepFor(1);
         clickThis(readingLvlGuided);
         clickThis(continueToSiteBtn);
         closeOfferNtf();
     }
 
     public void closeOfferNtf() {
-        sleepFor(5);
         if(isElementDisplayed(closeNtf)) clickThis(closeNtf);
     }
 
@@ -151,7 +137,6 @@ public class HomePage extends BasePage {
     }
 
     public String getSchoolAddress() {
-        sleepFor(1);
         String schAdd = getTextValue(schoolAddress);
         String schSt = getTextValue(schoolState);
         return  schAdd + " " + schSt;
@@ -169,7 +154,6 @@ public class HomePage extends BasePage {
         waitForElement(cityField);
         clickThis(cityField);
         type(cityField, userCity.substring(0, (userCity.length()-1)));
-        sleepFor(1);
         waitForElement(selectCity);
         clickThis(selectCity);
     }
@@ -189,9 +173,7 @@ public class HomePage extends BasePage {
         type(signInEmail, userLogin);
         type(signInPassword, userPassword);
         clickThis(signInButton);
-        sleepFor(1);
         closeOfferNtf();
-        sleepFor(1);
     }
 
     public void searchFor(String item) {

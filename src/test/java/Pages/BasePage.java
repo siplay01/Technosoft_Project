@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class BasePage {
 
@@ -54,6 +55,7 @@ public class BasePage {
 
     public void type(By locator, String data) {
         waitForElement(locator);
+        findElementUsingFluentWait(locator).clear();
         findElementUsingFluentWait(locator).sendKeys(data);
     }
 
@@ -103,7 +105,6 @@ public class BasePage {
     }
 
     public void scrollDown(int pixelsDown) {
-        // String pixelsDownStr = String.valueOf(pixelsDown);
         JavascriptExecutor js = (JavascriptExecutor)Web.getDriver();
         js.executeScript("scrollBy(0,"+pixelsDown+");");
     }
@@ -129,7 +130,16 @@ public class BasePage {
         Point location = element.getLocation();
         int x = location.getX();
         int y = location.getY();
-        System.out.println("Coordinates of an element is : " + x + " and " + y);
+    }
+
+    public boolean isElementExist(By element) {
+        Web.getDriver().manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        try {
+            Web.getDriver().findElement(element);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
     }
 
     public Set<String> getAllWindowHandles() {

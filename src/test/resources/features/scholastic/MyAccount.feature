@@ -1,7 +1,6 @@
 @Regression
 Feature: Add Credit Card
 
-  @Smoke
   Scenario Outline: Verify teacher can add only 3 credit cards under My Credit Cards in My Accounts
     When User logged in with valid <Login> and <Password>
     And User navigated to My Account page
