@@ -35,11 +35,9 @@ public class EnterOrderSD {
         myAccPage.goesToYourTeacherOrders();
     }
 
-
     @When("^User clicked on Price-QTY box$")
     public void userClickedOnPriceQTYBox() {
         ytoPage.clickedOnPriceQTYBox();
-
     }
 
     @Then("^User verified that a jumper right above the box with message: (.+) is visible$")
@@ -50,23 +48,21 @@ public class EnterOrderSD {
     }
 
     @When("^User entered (.+) then added (.+), (.+), (.+), (.+), (.+), (.+)$")
-    public void userEnteredStudentNameThenAddedItems(String studentName, String item1, String qty1, String item2, String qty2, String item3, String qty3 ) {
+    public void userEnteredStudentNameThenAddedItems(String studentName, String item1, String qty1, String item2, String qty2, String item3, String qty3) {
         sfoPage.enterStudentName(studentName);
         sfoPage.enterItem(item1, qty1);
         sfoPage.enterItem(item2, qty2);
         sfoPage.enterItem(item3, qty3);
     }
 
-
-    @Then("^User verified correct student name, item number and quantity gets added under SFO (.+), (.+), (.+), (.+), (.+), (.+), (.+)$")
-    public void verifyCorrectStudentNameItemNumberAndQuantityGetsAddedUnderSFO(String studentName, String item1, String qty1, String item2, String qty2, String item3, String qty3) {
+    @Then("^User verified correct (.+), item number (.+), (.+), (.+) and quantity (.+), (.+), (.+) gets added under SFO$")
+    public void verifyCorrectStudentNameItemNumberAndQuantityGetsAddedUnderSFO(String studentName, String item1, String item2, String item3, String qty1, String qty2, String qty3) {
         String[] listOfItems = {item1, item2, item3};
         String[] listOfQty = {qty1, qty2, qty3};
         Assert.assertTrue(sfoPage.isNameCorrect(studentName), "Student's name is NOT correct");
         Assert.assertTrue(sfoPage.isItemNumCorrect(listOfItems), "Item Numbers are NOT correct for student");
         Assert.assertTrue(sfoPage.isQtyCorrect(listOfQty), "Quantity is NOT correct for student");
     }
-
 
     @Then("^User verified correct Student-total \\(amount, items and quantity\\) and SFO Total (.+), (.+), (.+), (.+), (.+), (.+)$")
     public void verifyCorrectStudentTotalAmountItemsAndQuantityAndSFOTotal(String item1, String qty1, String item2, String qty2, String item3, String qty3) {
@@ -78,7 +74,6 @@ public class EnterOrderSD {
         Assert.assertTrue(cartPage.isSFOCorrect(), "Student SFO is NOT correct");
         Assert.assertTrue(cartPage.isItemNumCorrect(listOfItems), "Item Numbers are NOT correct for student");
         Assert.assertTrue(cartPage.isQtyCorrect(listOfQty), "Quantity is NOT correct for student");
-
     }
 
     @When("^User entered: (.+), (.+), (.+), (.+), (.+), (.+), (.+), (.+), (.+), (.+), (.+), (.+), (.+)$")
@@ -91,11 +86,10 @@ public class EnterOrderSD {
         sfoPage.enterStudentName(studentName3);
         sfoPage.enterItem(item4, qty4);
         sfoPage.enterItem(item5, qty5);
-
     }
 
-    @Then("^User verified correct students names, item numbers and quantity gets added under SFO (.+), (.+), (.+), (.+), (.+), (.+), (.+), (.+), (.+), (.+), (.+), (.+), (.+)$")
-    public void verifyCorrectStudentsNamesItemNumbersAndQuantityGetsAddedUnderSFO(String studentName1, String item1, String qty1, String item2, String qty2, String studentName2, String item3, String qty3, String studentName3, String item4, String qty4, String item5, String qty5) {
+    @Then("^User verified correct students names (.+), (.+), (.+), item numbers (.+), (.+), (.+), (.+), (.+) and quantity (.+), (.+), (.+), (.+), (.+) gets added under SFO$")
+    public void verifyCorrectStudentsNamesItemNumbersAndQuantityGetsAddedUnderSFO(String studentName1, String studentName2, String studentName3, String item1, String item2, String item3, String item4, String item5, String qty1, String qty2, String qty3, String qty4, String qty5) {
         String[] listOfItems = {item1, item2, item3, item4, item5};
         String[] listOfQty = {qty1, qty2, qty3, qty4, qty5};
         String[] listOfNames = {studentName1, studentName1, studentName2, studentName3, studentName3};
@@ -181,9 +175,13 @@ public class EnterOrderSD {
     public void verifyThankYouMessageAndOrderReceiptReferenceNumberAreDisplayed() {
         Assert.assertTrue(orderCnfPage.isThankUMsgDisplayed());
         Assert.assertTrue(orderCnfPage.isOrderReceiptReferenceNumberDisplayed());
-
     }
 
-
-
+    @Then("^User verified that he can place an order using the added credit cards$")
+    public void userVerifiedThatHeCanPlaceAnOrderUsingTheAddedCreditCards() {
+        checkOutPage.selectCreditCardPaymentMethod();
+        checkOutPage.goesToPayment();
+        Assert.assertTrue(orderCnfPage.isThankUMsgDisplayed());
+        Assert.assertTrue(orderCnfPage.isOrderReceiptReferenceNumberDisplayed());
+    }
 }

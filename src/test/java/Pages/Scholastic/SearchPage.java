@@ -1,6 +1,5 @@
 package Pages.Scholastic;
 
-import DriverWrapper.Web;
 import Pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -22,7 +21,7 @@ public class SearchPage extends BasePage {
         clickThis(quickViewBtn);
         String bookName = getTextValue(bookNameLocator);
         clickThis(recommendedBtn);
-        Web.getDriver().findElement(recommendToStudsChekBox).sendKeys(Keys.SPACE);
+        type(recommendToStudsChekBox, Keys.SPACE);
         clickThis(closeQW);
         clickThis(myLists);
         clickThis(recommendToStudsList);

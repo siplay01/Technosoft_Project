@@ -87,7 +87,7 @@ public class HomePage extends BasePage {
 
     public void enterPass(String userPassword) { type(passwordFld, userPassword);}
 
-    public void clickCheckbox() { Web.getDriver().findElement(checkBox).sendKeys(Keys.SPACE); }
+    public void clickCheckbox() { type(checkBox, Keys.SPACE); }
 
     public void clickNext() { clickThis(nextBtn); }
 

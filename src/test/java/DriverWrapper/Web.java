@@ -23,7 +23,10 @@ public class Web {
 
     @After
     public void quitDriver() {
-        driver.quit(); }
+        driver.quit();
+    }
 
-    public static WebDriver getDriver() { return driver; }
+    public static WebDriver getDriver() {
+        return driver;
+    }
 }

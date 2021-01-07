@@ -1,7 +1,6 @@
-@Regression
+@Regression @Smoke
 Feature: Recommendations for Students
 
-  @Smoke
   Scenario Outline: Verify that Teacher can add books in Recommendations List from Quick View
     When User logged in with valid <Login> and <Password>
     And User searched for '<Item>'

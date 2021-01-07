@@ -41,11 +41,12 @@ public class YourTeacherOrderPage extends BasePage {
 
     public void addItem(String[] listOfItems) {
         for (String s : listOfItems) {
-            if(isElementExist(By.xpath("//li[@class='ui-menu-item']"))) sleepFor(1);
+            if (isElementExist(By.xpath("//li[@class='ui-menu-item']"))) sleepFor(1);
             type(enterItemFld, s);
             clickThis(addBtn);
         }
     }
+
     public void goesReviewCart() {
         clickThis(reviewCartBtn);
     }

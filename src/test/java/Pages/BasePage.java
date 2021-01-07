@@ -34,7 +34,7 @@ public class BasePage {
         });
     }
 
-        public List<WebElement> findElementsUsingFluentWait(final By locator) {
+    public List<WebElement> findElementsUsingFluentWait(final By locator) {
         Wait<WebDriver> fWait = new FluentWait<>(Web.getDriver())
                 .withTimeout(Duration.ofSeconds(30))
                 .pollingEvery(Duration.ofSeconds(1))
@@ -59,13 +59,20 @@ public class BasePage {
         findElementUsingFluentWait(locator).sendKeys(data);
     }
 
+    public void type(By locator, Keys data) {
+        waitForElement(locator);
+        findElementUsingFluentWait(locator).clear();
+        findElementUsingFluentWait(locator).sendKeys(data);
+    }
+
     public void pressEnter(By locator) {
         findElementUsingFluentWait(locator).sendKeys(Keys.ENTER);
     }
 
     public void clickThis(By locator) {
         waitForElement(locator);
-        findElementUsingFluentWait(locator).click(); }
+        findElementUsingFluentWait(locator).click();
+    }
 
     public boolean isElementDisplayed(By locator) {
         return findElementUsingFluentWait(locator).isDisplayed();
@@ -83,7 +90,9 @@ public class BasePage {
         dropdown.selectByIndex(index);
     }
 
-    public String getWebpageTitle() { return Web.getDriver().getTitle(); }
+    public String getWebpageTitle() {
+        return Web.getDriver().getTitle();
+    }
 
     public void setCursor(By locator) {
         WebElement element = findElementUsingFluentWait(locator);
@@ -105,13 +114,13 @@ public class BasePage {
     }
 
     public void scrollDown(int pixelsDown) {
-        JavascriptExecutor js = (JavascriptExecutor)Web.getDriver();
-        js.executeScript("scrollBy(0,"+pixelsDown+");");
+        JavascriptExecutor js = (JavascriptExecutor) Web.getDriver();
+        js.executeScript("scrollBy(0," + pixelsDown + ");");
     }
 
     public void scrollIntoView(By element) {
         WebElement webElement = Web.getDriver().findElement(element);
-        JavascriptExecutor js = (JavascriptExecutor)Web.getDriver();
+        JavascriptExecutor js = (JavascriptExecutor) Web.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", webElement);
     }
 

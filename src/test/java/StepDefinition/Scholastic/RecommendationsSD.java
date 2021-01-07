@@ -33,7 +33,7 @@ public class RecommendationsSD {
 
     @Then("^User verified that the item is added in Recommendations to Students Lists under My Lists$")
     public void verifyThatTheItemIsAddedInRecommendationsToStudentsListsUnderMyLists() {
-    Assert.assertTrue(wishlistPage.isElemPresent(selectedBook), "Item NOT added in Recommendations");
+        Assert.assertTrue(wishlistPage.isElemPresent(selectedBook), "Item NOT added in Recommendations");
     }
 
 

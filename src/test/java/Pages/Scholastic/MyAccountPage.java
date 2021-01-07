@@ -36,7 +36,6 @@ public class MyAccountPage extends BasePage {
     By byItem = By.xpath("(//a[contains(text(), 'By Item#')])[1]");
 
 
-
     public String getClassCode() {
         return getTextValue(classCode);
     }
@@ -49,7 +48,7 @@ public class MyAccountPage extends BasePage {
         String addr = getTextValue(address);
         String st = getTextValue(state);
         String zipCode = getTextValue(zip);
-        return  addr + " " + st + " " + zipCode;
+        return addr + " " + st + " " + zipCode;
     }
 
     public boolean isErrorMsgDisplayed() {
@@ -59,10 +58,10 @@ public class MyAccountPage extends BasePage {
 
     public void addCreditCard() {
         List<WebElement> creditCardsList = Web.getDriver().findElements(creditCardList);
-        if(creditCardsList.size()==3) {
+        if (creditCardsList.size() == 3) {
             return;
         } else {
-            type(cardNumFld,"4111111111111111");
+            type(cardNumFld, "4111111111111111");
             clickThis(expMonth);
             clickThis(month);
             clickThis(expYear);
